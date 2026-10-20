@@ -288,5 +288,21 @@ footer {
 </footer>
 
 </body>
+
+<script>
+  const debutPromo = new Date("2026-10-20T00:00:00+01:00");
+  const finPromo = new Date("2026-11-01T00:00:00+01:00");
+  const maintenant = new Date();
+
+  const prix = document.querySelector(".new-price");
+  const offre = document.querySelector("h2");
+
+  if (prix && maintenant >= debutPromo && maintenant < finPromo) {
+    prix.textContent = "2 000 FCFA";
+  } else if (prix && maintenant >= finPromo) {
+    prix.textContent = "3 000 FCFA";
+    if (offre) offre.textContent = "Prix habituel";
+  }
+</script>
 </html>
 
