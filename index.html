@@ -291,16 +291,22 @@ COMMANDER SUR WHATSAPP
   const debutPromo = new Date("2026-10-20T00:00:00+01:00");
   const finPromo = new Date("2026-11-01T00:00:00+01:00");
   const maintenant = new Date();
+const prix = document.querySelector(".new-price");
+const ancienPrix = document.querySelector(".old-price");
+const offre = document.querySelector("h2");
 
-  const prix = document.querySelector(".new-price");
-  const offre = document.querySelector("h2");
+if (prix) {
+  prix.textContent = "3000 F CFA";
+  prix.style.color = "#174b35";
+}
 
-  if (prix && maintenant >= debutPromo && maintenant < finPromo) {
-    prix.textContent = "2 000 FCFA";
-  } else if (prix && maintenant >= finPromo) {
-    prix.textContent = "3 000 FCFA";
-    if (offre) offre.textContent = "Prix habituel";
-  }
+if (ancienPrix) {
+  ancienPrix.style.display = "none";
+}
+
+if (offre && offre.textContent.includes("Offre de lancement")) {
+  offre.style.display = "none";
+}
 </script>
 </html>
 
