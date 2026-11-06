@@ -300,14 +300,7 @@ if (prix) {
   prix.style.cssText =
     "display:block;background:#F0F6F1;color:#174B35;font-size:38px;font-weight:800;text-align:center;padding:22px 15px;margin:20px auto;border-radius:12px;letter-spacing:1px;";
 }
-
-if (ancienPrix) {
-  ancienPrix.style.display = "none";
-}
-
-if (offre && offre.textContent.includes("Offre de lancement")) {
-  offre.style.display = "none";
-}const prix = document.querySelector(".new-price");
+const prix = document.querySelector(".new-price");
 const ancienPrix = document.querySelector(".old-price");
 const offre = document.querySelector("h2");
 
@@ -315,14 +308,6 @@ if (prix) {
   prix.textContent = "3 000 FCFA";
   prix.style.cssText =
     "display:block;background:#F0F6F1;color:#174B35;font-size:38px;font-weight:800;text-align:center;padding:22px 15px;margin:20px auto;border-radius:12px;letter-spacing:1px;";
-}
-
-if (ancienPrix) {
-  ancienPrix.style.display = "none";
-}
-
-if (offre && offre.textContent.includes("Offre de lancement")) {
-  offre.style.display = "none";
 }
 
 if (ancienPrix) {
